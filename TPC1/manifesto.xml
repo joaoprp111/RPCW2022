@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no" ?>
+<metadados>
+    <titulo>TPC1 - Jacaré</titulo>
+    <data>19-02-2022</data>
+    <autor>João Paulo Ribeiro Pereira</autor>
+    <uc>Representação e Processamento de Conhecimento na Web</uc>
+</metadados>
+<resumo>
+    Este trabalho consiste em criar uma página web, com a sofisticação que entendermos, de acordo com os seguintes temas:
+    -Jacaré
+    -Janela
+    -Japão
+    -Jarro 
+    -José
+
+    Escolhi o tema do jacaré e decidir fazer 4 páginas html: uma com informações gerais do jacaré, outra que contém uma tabela com algumas das espécies de jacarés, outra com um slideshow de imagens de diferentes jacarés e por fim uma com um pouco de história. Decidi explorar um pouco o html, javascript e css.
+</resumo>
+<resultados>
+    <ficheiro>html/home.html</ficheiro>
+    <ficheiro>html/table.html</ficheiro>
+    <ficheiro>html/images.html</ficheiro>
+    <ficheiro>html/history.html</ficheiro>
+    <ficheiro>css/colors.css</ficheiro>
+    <ficheiro>css/w3.css</ficheiro>
+    <ficheiro>Imagens/jacare-do-papo-amarelo.jpg</ficheiro>
+    <ficheiro>Imagens/jacare-americano.jpg</ficheiro>
+    <ficheiro>Imagens/jacare-anão.jpg</ficheiro>
+    <ficheiro>Imagens/jacare-da-china.JPG</ficheiro>
+    <ficheiro>Imagens/jacare-açu.jpg</ficheiro>
+</resultados>
