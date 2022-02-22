@@ -1,32 +1,71 @@
-<?xml version = "1.0" encoding = "UTF-8" standalone = "no" ?>
-<manifesto>
-    <metadados>
-        <titulo>TPC1 - Jacaré</titulo>
-        <data>21-02-2022</data>
-        <autor>João Paulo Ribeiro Pereira</autor>
-        <uc>Representação e Processamento de Conhecimento na Web</uc>
-    </metadados>
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC1: uma página web</titulo>
+        <data>2022-02-21</data>
+        <autor>
+            <id>PG47325</id>
+            <nome>João Paulo Ribeiro Pereira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
     <resumo>
-        Este trabalho consiste em criar uma página web, com a sofisticação que entendermos, de acordo com os seguintes temas:
-        -Jacaré
-        -Janela
-        -Japão
-        -Jarro 
-        -José
+        <p>Este trabalho consiste em criar uma página web, com a sofisticação que entendermos, de acordo com os seguintes temas:</p>
+        <p>-Jacaré</p>
+        <p>-Janela</p>
+        <p>-Japão</p>
+        <p>-Jarro</p>
+        <p>-José</p>
 
-        Escolhi o tema do jacaré e decidir fazer 4 páginas html: uma com informações gerais do jacaré, outra que contém uma tabela com algumas das espécies de jacarés, outra com um slideshow de imagens de diferentes jacarés e por fim uma com um pouco de história. Decidi explorar um pouco o html, javascript e css.
+        <p>Escolhi o tema do jacaré e decidir fazer 4 páginas html: uma com informações gerais do jacaré, outra que contém uma tabela com algumas das espécies de jacarés, outra com um slideshow de imagens de diferentes jacarés e por fim uma com um pouco de história. Decidi explorar um pouco o html, javascript e css.</p>
     </resumo>
     <resultados>
-        <ficheiro>html/home.html</ficheiro>
-        <ficheiro>html/table.html</ficheiro>
-        <ficheiro>html/images.html</ficheiro>
-        <ficheiro>html/history.html</ficheiro>
-        <ficheiro>css/colors.css</ficheiro>
-        <ficheiro>css/w3.css</ficheiro>
-        <ficheiro>Imagens/jacare-do-papo-amarelo.jpg</ficheiro>
-        <ficheiro>Imagens/jacare-americano.jpg</ficheiro>
-        <ficheiro>Imagens/jacare-anao.jpg</ficheiro>
-        <ficheiro>Imagens/jacare-da-china.JPG</ficheiro>
-        <ficheiro>Imagens/jacare-acu.jpg</ficheiro>
+        <resultado>
+            <url>html/home.html</url>
+            <texto>Página web</texto>
+        </resultado>
+        <resultado>
+            <url>html/table.html</url>
+            <texto>Página web</texto>
+        </resultado>
+        <resultado>
+            <url>html/images.html</url>
+            <texto>Página web</texto>
+        </resultado>
+        <resultado>
+            <url>html/history.html</url>
+            <texto>Página web</texto>
+        </resultado>
+        <resultado>
+            <url>css/colors.css</url>
+            <texto>Stylesheet</texto>
+        </resultado>
+        <resultado>
+            <url>css/w3.css</url>
+            <texto>Stylesheet</texto>
+        </resultado>
+        <resultado>
+            <url>Imagens/jacare-do-papo-amarelo.jpg</url>
+            <texto>Imagem</texto>
+        </resultado>
+        <resultado>
+            <url>Imagens/jacare-americano.jpg</url>
+            <texto>Imagem</texto>
+        </resultado>
+        <resultado>
+            <url>Imagens/jacare-anao.jpg</url>
+            <texto>Imagem</texto>
+        </resultado>
+        <resultado>
+            <url>Imagens/jacare-da-china.jpg</url>
+            <texto>Imagem</texto>
+        </resultado>
+        <resultado>
+            <url>Imagens/jacare-acu.jpg</url>
+            <texto>Imagem</texto>
+        </resultado>
     </resultados>
-</manifesto>
+</doc>
