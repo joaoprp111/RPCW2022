@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC2: Criação de um servidor de páginas web e de um conversor de json para html</titulo>
+        <data>2022-02-26</data>
+        <autor>
+            <id>PG47325</id>
+            <nome>João Paulo Ribeiro Pereira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este trabalho consiste em recolher dados de um dataset em JSON e gerar páginas html (localhost:7777/filmes/fX) para cada registo nele presente.</p>
+        <p>Os registos representam filmes, com a indicação do título, ano, géneros e elenco.</p>
+        <p>Depois de gerar as páginas web foi necessário implementar um servidor para as servir sempre que fossem pedidas.</p>
+        <p>Adicionalmente, foi criada uma página geral (localhost:7777/filmes), com todos os filmes existentes no dataset ordenados por ordem alfabética.</p>
+        <p>Estes filmes contêm uma hiperligação para a página correspondente.</p>
+        <p>Como trabalho opcional, decidi gerar uma página html para cada ator (localhost:7777/atores/aX) que pudesse ocorrer em qualquer dos filmes.</p>
+        <p>Da mesma forma que a página geral de filmes, foi também criada uma página de atores (localhost:7777/atores), ordenados alfabeticamente, e com a hiperligação para a sua página correspondente.</p>
+        <p>A página de cada ator indica o seu nome, e os filmes onde participa, todos estes com hiperligação para a sua página.</p>
+        <p>Foi utilizada a referência do W3.css para as páginas html.</p>
+        <p>Todo o html gerado é criado dentro de uma diretoria (/html), que se não existir é criada na hora.</p>
+        <p>Nota: qualquer página HTML é gerada pelo conversor, até mesmo a index.html.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>conversorHtml.py</url>
+            <texto>Script em Python que converte os registos do ficheiro JSON em páginas HTML</texto>
+        </resultado>
+        <resultado>
+            <url>dataset.json</url>
+            <texto>Dataset com registos de filmes</texto>
+        </resultado>
+        <resultado>
+            <url>fileserver.js</url>
+            <texto>Servidor em JavaScript, que responde aos pedidos feitos pelos clientes.</texto>
+        </resultado>
+    </resultados>
+</doc>

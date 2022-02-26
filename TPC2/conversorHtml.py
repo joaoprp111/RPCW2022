@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 def generateAtoresPage(actorsId):
     html = '''
@@ -8,11 +9,10 @@ def generateAtoresPage(actorsId):
         <head>
             <meta charset="UTF-8">
             <title>Atores</title>
-            <link rel="stylesheet" href="../css/w3.css">
-            <link rel="stylesheet" href="../css/styling.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         </head>
-        <body>
-            <h1>Lista de atores por ordem alfabética</h1>
+        <body class="w3-container" style="background-color: rgb(22, 22, 22); color: white;">
+            <h1 class="w3-text-amber">Lista de atores por ordem alfabética</h1>
             <ul>
     '''
     #Sort actors alphabetically
@@ -30,12 +30,11 @@ def generateActorPage(actorName, movies, moviesDict):
         <head>
             <meta charset="UTF-8">
             <title>''' + actorName + '''</title>
-            <link rel="stylesheet" href="/css/w3.css">
-            <link rel="stylesheet" href="/css/styling.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         </head>
-        <body>
-            <h1>''' + actorName + '''</h1>
-            <h2>Filmes onde participa</h2>
+        <body class="w3-container" style="background-color: rgb(22, 22, 22); color: white;">
+            <h1 class="w3-text-amber">''' + actorName + '''</h1>
+            <h2 class="w3-text-amber">Filmes onde participa</h2>
             <ul>
     '''
     moviesDictKeys = list(moviesDict.keys())
@@ -56,11 +55,10 @@ def generateFilmesPage(movies):
         <head>
             <meta charset="UTF-8">
             <title>Filmes</title>
-            <link rel="stylesheet" href="../css/w3.css">
-            <link rel="stylesheet" href="../css/styling.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         </head>
-        <body>
-            <h1>Lista de filmes por ordem alfabética</h1>
+        <body class="w3-container" style="background-color: rgb(22, 22, 22); color: white;">
+            <h1 class="w3-text-amber">Lista de filmes por ordem alfabética</h1>
             <ul>
     '''
     #Sort movies alphabetically
@@ -72,12 +70,15 @@ def generateFilmesPage(movies):
     return html
 
 def content(movieContent, actorsIds):
-    contentHtml = '<h1>' + movieContent['title'] + '</h1>' + '<p>' + str(movieContent['year']) + ' | '
+    contentHtml = '<h1 class="w3-text-amber">' + movieContent['title'] + '</h1>' + '<div class="w3-border-top w3-border-bottom">' + '<p>' + str(movieContent['year']) + '</p>' + '<p>'
+    
+    if len(movieContent['genres']) > 0:
+        contentHtml += '| '
     
     for genero in movieContent['genres']:
-        contentHtml += genero + ' '
+        contentHtml += genero + ' | '
     
-    contentHtml += '</p>' + '<h2>Elenco</h2>' + '<ul>'
+    contentHtml += '</p></div>' + '<h2 class="w3-text-amber">Elenco</h2>' + '<ul>'
     
     elenco = movieContent['cast']
     for ator in elenco:
@@ -94,10 +95,9 @@ def generateHtml(movieContent, file, actorsIds):
         <head>
             <meta charset="UTF-8">
             <title>''' + movieContent['title'] + '''</title>
-            <link rel="stylesheet" href="/css/w3.css">
-            <link rel="stylesheet" href="/css/styling.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         </head>
-        <body>''' + content(movieContent,actorsIds) + '''</body></html>'''
+        <body class="w3-container" style="background-color: rgb(22, 22, 22); color: white;">''' + content(movieContent,actorsIds) + '''</body></html>'''
         
     file.write(html)
 

@@ -7,7 +7,11 @@ myserver = http.createServer(function(req, res) {
     var myurl = url.parse(req.url, true).pathname
     var content = myurl.split("/")[1]
     var id = myurl.split("/")[2]
-    if (id && (content == "filmes" || content == "atores")){
+    var substr = ""
+    if (id){
+        substr = id.substring(0,1)
+    }
+    if (id && ((content == "filmes" && substr == "f") || (content == "atores" && substr == "a"))){
         fs.readFile('./html/' + id + '.html', function(err, data){
             if(err){
                 res.writeHead(404)
