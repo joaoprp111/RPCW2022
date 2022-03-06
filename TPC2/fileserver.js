@@ -12,10 +12,12 @@ myserver = http.createServer(function(req, res) {
         substr = id.substring(0,1)
     }
     if (id && ((content == "filmes" && substr == "f") || (content == "atores" && substr == "a"))){
-        fs.readFile('./html/' + id + '.html', function(err, data){
+        fs.readFile('./generatedHtml/' + id + '.html', function(err, data){
             if(err){
                 res.writeHead(404)
+                console.log('Erro no pedido da página de um filme ou ator!')
             }else{
+                console.log('Página ' + id + ' fornecida com sucesso!')
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
                 res.write(data)
             }
@@ -23,10 +25,12 @@ myserver = http.createServer(function(req, res) {
         })
     }
     else if (myurl == "/filmes"){
-        fs.readFile('./html/index.html', function(err, data){
+        fs.readFile('./generatedHtml/filmes.html', function(err, data){
             if(err){
+                console.log('Erro no pedido da página de filmes!')
                 res.writeHead(404)
             }else{
+                console.log('Página de filmes fornecida com sucesso!')
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
                 res.write(data)
             }
@@ -34,10 +38,12 @@ myserver = http.createServer(function(req, res) {
         })
     }
     else if (myurl == "/atores"){
-        fs.readFile('./html/atores.html', function(err, data){
+        fs.readFile('./generatedHtml/atores.html', function(err, data){
             if(err){
+                console.log('Erro no pedido da página de atores!')
                 res.writeHead(404)
             }else{
+                console.log('Página de atores fornecida com sucesso!')
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
                 res.write(data)
             }
@@ -45,6 +51,7 @@ myserver = http.createServer(function(req, res) {
         })
     }
     else{
+        console.log('Erro: Rota ' + myurl +' não permitida...')
         res.writeHead(404)
         res.end()
     }

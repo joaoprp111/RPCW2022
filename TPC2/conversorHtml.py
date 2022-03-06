@@ -101,74 +101,78 @@ def generateHtml(movieContent, file, actorsIds):
         
     file.write(html)
 
-#Open dataset
-f = open('dataset.json', encoding='utf-8')
+def main():
+    #Open dataset
+    f = open('dataset.json', encoding='utf-8')
 
-#Dict with id as a key and movie name as a value
-movies = dict()
+    #Dict with id as a key and movie name as a value
+    movies = dict()
 
-#Actor's name and its id
-actorsId = dict()
-#Actor's name and its movies
-actorsMovies = dict()
+    #Actor's name and its id
+    actorsId = dict()
+    #Actor's name and its movies
+    actorsMovies = dict()
 
-#Html folder
-folderHtml = 'html/'
-#Create it if it doesn't exist
-if not os.path.exists(folderHtml):
-    os.makedirs(folderHtml)
+    #Html folder
+    folderHtml = 'generatedHtml/'
+    #Create it if it doesn't exist
+    if not os.path.exists(folderHtml):
+        os.makedirs(folderHtml)
 
-#List of registers (movies)
-jsonObj = json.load(f)
-#Movies counter
-count = 1
-actorCount = 1
+    #List of registers (movies)
+    jsonObj = json.load(f)
+    #Movies counter
+    count = 1
+    actorCount = 1
 
-print('Generating pages...')
-for reg in jsonObj:
-    movies[count] = reg
-    count += 1
+    print('Generating pages...')
+    for reg in jsonObj:
+        movies[count] = reg
+        count += 1
+        
+        #Fill actors dictionaires
+        for actor in reg['cast']:
+            #For every actor
+            if actor not in actorsId.keys():
+                actorsId[actor] = actorCount
+                actorCount += 1
+            actorsMovies.setdefault(actor,[])
+            actorsMovies[actor].append(reg['title'])
+        
+    #Generate all movies pages
+    for (k,v) in movies.items():  
+        #Create html file that corresponds to the movie
+        filename = folderHtml + 'f' + str(k) + '.html'
+        htmlFile = open(filename,'w',encoding='utf-8')
+        generateHtml(v,htmlFile,actorsId)
+        htmlFile.close()
+        
+    #Update movies dict
+    for key in movies.keys():
+        temp = movies.get(key)
+        movies[key] = temp['title']
+
+    #Generate main page (/filmes)
+    htmlMainPage = generateFilmesPage(movies)
+    indexFile = open('generatedHtml/filmes.html','w',encoding='utf-8')
+    indexFile.write(htmlMainPage)
+    indexFile.close()
+
+    #Generate aditional page (/atores)
+    htmlAtores = generateAtoresPage(actorsId)
+    atoresFile = open('generatedHtml/atores.html','w',encoding='utf-8')
+    atoresFile.write(htmlAtores)
+    atoresFile.close()
+
+    #Generate actors pages
+    for actor in actorsId.keys():
+        actorFilename = 'generatedHtml/a' + str(actorsId[actor]) + '.html'
+        htmlActorPage = generateActorPage(actor, actorsMovies[actor], movies)
+        actorFile = open(actorFilename, 'w', encoding='utf-8')
+        actorFile.write(htmlActorPage)
+        actorFile.close()
+        
+    print('Done!')
     
-    #Fill actors dictionaires
-    for actor in reg['cast']:
-        #For every actor
-        if actor not in actorsId.keys():
-            actorsId[actor] = actorCount
-            actorCount += 1
-        actorsMovies.setdefault(actor,[])
-        actorsMovies[actor].append(reg['title'])
-    
-#Generate all movies pages
-for (k,v) in movies.items():  
-    #Create html file that corresponds to the movie
-    filename = folderHtml + 'f' + str(k) + '.html'
-    htmlFile = open(filename,'w',encoding='utf-8')
-    generateHtml(v,htmlFile,actorsId)
-    htmlFile.close()
-    
-#Update movies dict
-for key in movies.keys():
-    temp = movies.get(key)
-    movies[key] = temp['title']
-
-#Generate main page (/filmes)
-htmlMainPage = generateFilmesPage(movies)
-indexFile = open('html/index.html','w',encoding='utf-8')
-indexFile.write(htmlMainPage)
-indexFile.close()
-
-#Generate aditional page (/atores)
-htmlAtores = generateAtoresPage(actorsId)
-atoresFile = open('html/atores.html','w',encoding='utf-8')
-atoresFile.write(htmlAtores)
-atoresFile.close()
-
-#Generate actors pages
-for actor in actorsId.keys():
-    actorFilename = 'html/a' + str(actorsId[actor]) + '.html'
-    htmlActorPage = generateActorPage(actor, actorsMovies[actor], movies)
-    actorFile = open(actorFilename, 'w', encoding='utf-8')
-    actorFile.write(htmlActorPage)
-    actorFile.close()
-    
-print('Done!')
+if __name__ == "__main__":
+    main()

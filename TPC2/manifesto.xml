@@ -22,13 +22,18 @@
         <p>Da mesma forma que a página geral de filmes, foi também criada uma página de atores (localhost:7777/atores), ordenados alfabeticamente, e com a hiperligação para a sua página correspondente.</p>
         <p>A página de cada ator indica o seu nome, e os filmes onde participa, todos estes com hiperligação para a sua página.</p>
         <p>Foi utilizada a referência do W3.css para as páginas html.</p>
-        <p>Todo o html gerado é criado dentro de uma diretoria (/html), que se não existir é criada na hora.</p>
-        <p>Nota: qualquer página HTML é gerada pelo conversor, até mesmo a index.html.</p>
+        <p>Todo o html gerado é criado dentro de uma diretoria (/generatedHtml), que se não existir é criada na hora.</p>
+        <p>Adicionalmente foi criada uma página index.html que é a página principal, deve ser aberta em primeiro lugar para facilitar a navegação pelo resto das páginas.</p>
+        <p>Contém hiperligações para as páginas gerais de filmes e de atores.</p>
     </resumo>
     <resultados>
         <resultado>
             <url>conversorHtml.py</url>
             <texto>Script em Python que converte os registos do ficheiro JSON em páginas HTML</texto>
+        </resultado>
+        <resultado>
+            <url>index.html</url>
+            <texto>Página principal do site</texto>
         </resultado>
         <resultado>
             <url>dataset.json</url>
