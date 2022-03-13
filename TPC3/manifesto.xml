@@ -20,7 +20,7 @@
         <p>Todas as páginas HTML são geradas como uma resposta do servidor. Quando a rota principal é acedida (http://localhost:4000/) é gerada a "MainPage", e a partir dessa página é possível navegar para todas as outras.</p>
         <p>Existe uma página com a listagem dos alunos, outra com a listagem de cursos e outra com a listagem de instrumentos.</p>
         <p>Adicionalmente, é possível aceder à página individual do aluno e do curso. Não decidi gerar a do instrumento porque as informações da tabela de instrumentos já apresenta bem cada um dos instrumentos.</p>
-        <p>Todas as rotas acedidas na web efetuam pedidos ao servidor, pedindo o conteúdo específico que o cliente quer receber. No caso das páginas individuais, por exemplo dos alunos, a rota é construída da seguinte forma (http://localhost:4000/alunos/idDoAluno) e para os cursos (http://localhost:4000/alunos/idDoCurso).</p>
+        <p>Todas as rotas acedidas na web efetuam pedidos ao servidor, pedindo o conteúdo específico que o cliente quer receber. No caso das páginas individuais, por exemplo dos alunos, a rota é construída da seguinte forma (http://localhost:4000/alunos/idDoAluno) e para os cursos (http://localhost:4000/cursos/idDoCurso).</p>
         <p>Quando o servidor recebe pedidos para páginas individuais faz uma query específica à API, por exemplo, http://localhost:3000/cursos?id=IDCURSO</p>
     </resumo>
     <resultados>
