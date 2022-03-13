@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC3: Escola de música</titulo>
+        <data>2022-03-13</data>
+        <autor>
+            <id>PG47325</id>
+            <nome>João Paulo Ribeiro Pereira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este TPC consiste no desenvolvimento de um servidor web em Node.js, capaz de responder a pedidos sobre conteúdo de uma escola de música.</p>
+        <p>O servidor responde ao cliente acedendo a uma API de dados, que contém todas as informações da escola num ficheiro JSON.</p>
+        <p>Tendo acesso ao dataset da escola (db.json) e à API (que fica a correr com o comando [> json-server --watch db.json]), o que ficou por implementar foi o servidor (escola.js).</p>
+        <p>A API fica a executar na porta 3000, enquanto que o servidor fica a executar na porta 4000 [> node escola.js].</p>
+        <p>Todas as páginas HTML são geradas como uma resposta do servidor. Quando a rota principal é acedida (http://localhost:4000/) é gerada a "MainPage", e a partir dessa página é possível navegar para todas as outras.</p>
+        <p>Existe uma página com a listagem dos alunos, outra com a listagem de cursos e outra com a listagem de instrumentos.</p>
+        <p>Adicionalmente, é possível aceder à página individual do aluno e do curso. Não decidi gerar a do instrumento porque as informações da tabela de instrumentos já apresenta bem cada um dos instrumentos.</p>
+        <p>Todas as rotas acedidas na web efetuam pedidos ao servidor, pedindo o conteúdo específico que o cliente quer receber. No caso das páginas individuais, por exemplo dos alunos, a rota é construída da seguinte forma (http://localhost:4000/alunos/idDoAluno) e para os cursos (http://localhost:4000/alunos/idDoCurso).</p>
+        <p>Quando o servidor recebe pedidos para páginas individuais faz uma query específica à API, por exemplo, http://localhost:3000/cursos?id=IDCURSO</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>db.json</url>
+            <texto>Dataset da escola de música</texto>
+        </resultado>
+        <resultado>
+            <url>escola.js</url>
+            <texto>Servidor da página web</texto>
+        </resultado>
+    </resultados>
+</doc>
