@@ -1,0 +1,22 @@
+{
+  "tarefas": [
+    {
+      "dataLimite": "2022-03-31",
+      "autor": "Maria Dias",
+      "descricao": "Lavar o tapete",
+      "tipo": "porRealizar",
+      "dataCriacao": "2022-03-18",
+      "dataRealizacao": "",
+      "id": 1
+    },
+    {
+      "dataLimite": "2022-03-30",
+      "autor": "Pedro Sampaio",
+      "descricao": "Correr",
+      "tipo": "porRealizar",
+      "dataCriacao": "2022-03-18",
+      "dataRealizacao": "",
+      "id": 2
+    }
+  ]
+}

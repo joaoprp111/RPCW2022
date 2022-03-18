@@ -1,0 +1,15 @@
+{
+  "name": "tarefas",
+  "version": "1.0.0",
+  "description": "servidor de tarefas",
+  "main": "tarefas.js",
+  "scripts": {
+    "test": "node tarefas.js",
+    "nodemon": "nodemon tarefas.js"
+  },
+  "author": "joaoprp",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
