@@ -1,20 +1,20 @@
 {
   "tarefas": [
     {
-      "dataLimite": "2022-03-31",
-      "autor": "Maria Dias",
-      "descricao": "Lavar o tapete",
-      "tipo": "porRealizar",
-      "dataCriacao": "2022-03-18",
-      "dataRealizacao": "",
+      "dataLimite": "2022-03-21",
+      "autor": "João Pereira",
+      "descricao": "Fazer o TPC4",
+      "tipo": "realizada",
+      "dataCriacao": "2022-03-19",
+      "dataRealizacao": "2022-03-19",
       "id": 1
     },
     {
-      "dataLimite": "2022-03-30",
-      "autor": "Pedro Sampaio",
-      "descricao": "Correr",
+      "dataLimite": "2022-03-26",
+      "autor": "Pedro",
+      "descricao": "Arrumar o quarto",
       "tipo": "porRealizar",
-      "dataCriacao": "2022-03-18",
+      "dataCriacao": "2022-03-19",
       "dataRealizacao": "",
       "id": 2
     }

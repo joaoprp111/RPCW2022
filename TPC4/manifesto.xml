@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC4: ToDo List</titulo>
+        <data>2022-03-19</data>
+        <autor>
+            <id>PG47325</id>
+            <nome>João Paulo Ribeiro Pereira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Neste quarto tpc, o objetivo era (1) criar uma única página web que pudesse permitir aos clientes ter a sua ToDo List e (2) criar um <xref><texto>servidor web dinâmico</texto><url>tarefas.js</url></xref> capaz de suportar e servir todos os seus pedidos.</p>
+        <p>Na parte superior da página existe um formulário, não só para registar uma nova tarefa, mas também para permitir a edição de tarefas já existentes.</p>
+        <p>Na parte inferior existem duas colunas, uma que apresenta as tarefas por realizar, à esquerda, e outra que apresenta as tarefas já completadas, à direita.</p>
+        <p>Nas tarefas por realizar, existem dois botões para cada, que permitem editar ou marcar como realizada.</p>
+        <p>Em cada tarefa realizada existe um botão que permite eliminar essa tarefa da página e do json-server.</p>
+        <p>As tarefas são representadas e armazenadas na <xref><texto>API</texto><url>tarefas.json</url></xref> através de uma lista de objetos JSON.</p>
+        <p>Cada tarefa contém o id, a data de criação (que é sempre a data do momento de registo de uma tarefa, seja esta uma edição da anterior ou uma totalmente nova), a data limite, a data de realização (é sempre a data do momento em que se clica no botão "feito", e inicialmente começa vazia), o autor da tarefa, a sua descrição e por fim o tipo (realizada ou por realizar).</p>
+        <p>Para executar o servidor deve ser feito o npm init, seguido de npm install dos pacotes necessários, por exemplo o axios. Posteriormente deve ser lançada a API com json-server --watch tarefas.json e por fim o servidor com node/nodemon tarefas.js.</p>
+        <p>Para aceder à página web basta finalmente aceder à <xref><texto>rota</texto><url>http://localhost:4000</url></xref></p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>tarefas.json</url>
+            <texto>Dataset das tarefas</texto>
+        </resultado>
+        <resultado>
+            <url>tarefas.js</url>
+            <texto>Servidor da página web</texto>
+        </resultado>
+        <resultado>
+            <url>static.js</url>
+            <texto>Servidor dos recursos estáticos, presentes na pasta public</texto>
+        </resultado>
+        <resultado>
+            <url>package.json</url>
+            <texto>Configurações para a execução do servidor</texto>
+        </resultado>
+        <resultado>
+            <url>public</url>
+            <texto>Diretoria que contém os recursos estáticos da página</texto>
+        </resultado>
+    </resultados>
+</doc>
