@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC5: Lista de músicas</titulo>
+        <data>2022-03-26</data>
+        <autor>
+            <id>PG47325</id>
+            <nome>João Paulo Ribeiro Pereira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este TPC consiste em satisfazer um conjunto de tarefas com o objetivo de construir um servidor com recurso à framework <xref><texto>Express</texto><url>https://expressjs.com/</url></xref>.</p>
+        <p>O primeiro desafio correspondia a tratar o dataset arq-son-EVO.json, de modo a ser compatível com o <xref><texto>json-server</texto><url>https://github.com/typicode/json-server</url></xref>, que corre na porta 3000, de modo a obter uma API REST para trabalhar com as listas de músicas.</p>
+        <p>Um dos problemas do dataset era o facto de não existir um objeto que englobasse a lista de músicas, e a falta de identificadores para cada uma.</p>
+        <p>Deste modo comecei por criar um script em python [generate-JSON-ids.py] que cria automaticamente um ficheiro arq-son.json já no formato desejado.</p>
+        <p>De seguida era necessário implementar o servidor em JavaScript, que deve satisfazer um conjunto de rotas.</p>
+        <p>Foi utilizado o css do w3 juntamente com Jade para aplicar styling às páginas.</p>
+        <p>O servidor corre na porta 3022, e a rota principal da página é a <xref><texto>Home</texto><url>http://localhost:3022/</url></xref> ou <xref><texto>Home</texto><url>http://localhost:3022/musicas</url></xref>.</p>
+        <p>É possível aceder à página de uma música através da <xref><texto>rota</texto><url>http://localhost:3022/musicas/:id</url></xref>.</p>
+        <p>É possível aceder à página de uma província, que contém todas as músicas dessa província, através da <xref><texto>rota</texto><url>http://localhost:3022/musicas/prov/:prov</url></xref>.</p>
+        <p>Adicionalmente é possível inserir músicas no dataset, passando pelo servidor e depois efetuando um POST com o <xref><texto>axios</texto><url>https://github.com/axios/axios</url></xref></p>
+        <p>Para inserir a música, inicialmente é feito um <xref><texto>get</texto><url>http://localhost:3022/musicas/inserir</url></xref>, depois é retornado um formulário ao cliente e quando este o registar é feito um <xref><texto>post em</texto><url>http://localhost:3022/musicas</url></xref> e posteriormente <xref><texto>em</texto><url>http://localhost:3000/musicas</url></xref></p>
+        <p>Existem várias views principais, uma para a inserção, outra para a lista de músicas, outra para a página da música e outra para a página da província.</p>
+        <p>De modo a executar o servidor é necessário seguir as indicações do "getting started" do <xref><texto>Express</texto><url>https://expressjs.com/</url></xref>, instalar os pacotes necessários (axios, express) e no final fazer "npm start" e "json-server --watch arq-son.json" para a API.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>arq-son-EVO.json</url>
+            <texto>Dataset inicial das músicas</texto>
+        </resultado>
+        <resultado>
+            <url>arq-son.json</url>
+            <texto>Dataset final das músicas</texto>
+        </resultado>
+        <resultado>
+            <url>generate-JSON-ids.py</url>
+            <texto>Script que cria o dataset final das músicas, corrigindo o inicial</texto>
+        </resultado>
+        <resultado>
+            <url>app.js</url>
+            <texto>Servidor principal da aplicação</texto>
+        </resultado>
+        <resultado>
+            <url>package.json</url>
+            <texto>Configurações para a execução do servidor</texto>
+        </resultado>
+        <resultado>
+            <url>public</url>
+            <texto>Diretoria que contém os recursos estáticos da página</texto>
+        </resultado>
+        <resultado>
+            <url>bin</url>
+            <texto>Diretoria que contém o script para iniciar o web server</texto>
+        </resultado>
+        <resultado>
+            <url>routes</url>
+            <texto>Diretoria com os serviços de rotas</texto>
+        </resultado>
+        <resultado>
+            <url>views</url>
+            <texto>Diretoria com todas as views implementadas</texto>
+        </resultado>
+    </resultados>
+</doc>

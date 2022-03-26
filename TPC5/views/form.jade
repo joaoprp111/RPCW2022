@@ -1,0 +1,50 @@
+extends layout 
+
+block content
+    .w3-container(style='margin-top: 50px;')
+        form.w3-container(action='/musicas' method='POST')
+            .w3-row
+                .w3-col.s3
+                    label(for='tit')
+                        b Título
+                    input#tit.w3-input.w3-border.w3-light-grey(type='text' value='' name='tit' maxlength='30' required='')
+                    br
+                .w3-col.s3
+                    label(for='musico')
+                        b Músico
+                    input#musico.w3-input.w3-border.w3-light-grey(type='text' value='' name='musico' maxlength='30' required='')
+                    br
+                .w3-col.s3
+                    label(for='local')
+                        b Local
+                    input#local.w3-input.w3-border.w3-light-grey(type='text' value='' name='local' maxlength='30')
+                    br
+                .w3-col.s3
+                    label(for='prov')
+                        b Província
+                    input#prov.w3-input.w3-border.w3-light-grey(type='text' value='' name='prov' maxlength='30' required='')
+                    br
+            .w3-row
+                .w3-col.s3
+                    label(for='obs')
+                        b Observações
+                    input#obs.w3-input.w3-border.w3-light-grey(type='text' value='' name='obs')
+                    br
+                .w3-col.s3
+                    label(for='file')
+                        b Ficheiro
+                    input#file.w3-input.w3-border.w3-light-grey(type='text' value='' name='file')
+                    br
+                .w3-col.s3
+                    label(for='fileType')
+                        b Tipo do ficheiro
+                    input#fileType.w3-input.w3-border.w3-light-grey(type='text' value='' name='fileType')
+                    br
+                .w3-col.s3
+                    label(for='duracao')
+                        b Duração
+                    input#duracao.w3-input.w3-border.w3-light-grey(type='text' value='' name='duracao' maxlength="10")
+                    br
+            .w3-container.w3-center
+                input.w3-btn.w3-green.w3-margin(type='submit' value='Registar')
+                input.w3-btn.w3-red.w3-margin(type='reset' value='Limpar valores')

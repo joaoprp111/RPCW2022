@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    .w3-container(style='margin-top: 35px;')
+        table.w3-text-black.w3-table.w3-bordered.w3-striped.w3-centered.w3-large
+            tr 
+                th Identificador
+                th Título
+                th Província 
+            each m in musics
+                tr
+                    td= m.id
+                    td
+                        a(href="/musicas/#{m.id}")= m.tit
+                    td 
+                        a(href="/musicas/prov/#{m.prov}")= m.prov

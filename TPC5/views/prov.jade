@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .w3-container(style='margin-top: 35px;')
+    h1 Lista de músicas da província #{prov}
+    ul.w3-ul 
+      each m in musics
+          li
+            a(href="/musicas/#{m.id}")= m.tit

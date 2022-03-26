@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .w3-container(style='margin-top: 35px;')
+    h1= m.tit
+    ul.w3-ul 
+        li Título: #{m.tit} 
+        li Província: 
+            a(href="/musicas/prov/#{m.prov}")= m.prov
+        li Local: #{m.local}
+        li Músico: #{m.musico}
