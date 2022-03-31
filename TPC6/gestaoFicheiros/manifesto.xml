@@ -25,39 +25,39 @@
     </resumo>
     <resultados>
         <resultado>
-            <url>controllers/file.js</url>
+            <url>gestaoFicheiros/controllers/file.js</url>
             <texto>Controlador para a gestão da meta-informação</texto>
         </resultado>
         <resultado>
-            <url>models/file.js</url>
+            <url>gestaoFicheiros/models/file.js</url>
             <texto>Modelo para a meta-informação dos ficheiros</texto>
         </resultado>
         <resultado>
-            <url>app.js</url>
+            <url>gestaoFicheiros/app.js</url>
             <texto>Aplicação web</texto>
         </resultado>
         <resultado>
-            <url>package.json</url>
+            <url>gestaoFicheiros/package.json</url>
             <texto>Configurações para a execução do servidor</texto>
         </resultado>
         <resultado>
-            <url>public/images/</url>
+            <url>gestaoFicheiros/public/images/</url>
             <texto>Diretoria que contém os ficheiros que vão sendo submetidos na página web.</texto>
         </resultado>
         <resultado>
-            <url>bin/</url>
+            <url>gestaoFicheiros/bin/</url>
             <texto>Diretoria que contém o script para iniciar o web server</texto>
         </resultado>
         <resultado>
-            <url>routes/index.js</url>
+            <url>gestaoFicheiros/routes/index.js</url>
             <texto>Rota principal</texto>
         </resultado>
         <resultado>
-            <url>views/</url>
+            <url>gestaoFicheiros/views/</url>
             <texto>Diretoria com todas as views implementadas</texto>
         </resultado>
         <resultado>
-            <url>uploads/</url>
+            <url>gestaoFicheiros/uploads/</url>
             <texto>Diretoria utilizada para armazenar temporariamente os uploads</texto>
         </resultado>
     </resultados>
