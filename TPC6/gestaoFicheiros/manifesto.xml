@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC6: Gestão de ficheiros</titulo>
+        <data>2022-03-31</data>
+        <autor>
+            <id>PG47325</id>
+            <nome>João Paulo Ribeiro Pereira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>O trabalho realizado neste tpc corresponde à implementação de uma web app com recurso a Expressjs, MongoDB e PUG.</p>
+        <p>Em primeiro lugar foi criada a aplicação web com o comando "express gestaoFicheiros --view=pug", sendo assim gerada uma pasta com todos os ficheiros necessários para o funcionamento da app.</p>
+        <p>Para armazenar a meta informação dos ficheiros foi utilizada uma coleção do MongoDB com o nome files e também uma diretoria de armazenamento no filesystem, denominada images, colocada dentro da pasta public para que o seu conteúdo fosse servido estaticamente.</p>
+        <p>Para aceder à página principal do servidor: <xref><texto>Home</texto><url>http://localhost:3078/</url></xref> ou <xref><texto>Home</texto><url>http://localhost:3078/files</url></xref></p>
+        <p>Na página principal é apresentado um form no topo, onde é possível fazer upload de um ficheiro. Em baixo aparece a lista dos ficheiros já armazenados assim como os seus atributos, e também um botão de "eliminar" para eliminar as suas informações da coleção e o próprio ficheiro do armazenamento.</p>
+        <p>Quando é feito o upload do ficheiro, as suas informações são adicionadas à coleção e o ficheiro é adicionado ao armazenamento.</p>
+        <p>Foi criada uma diretoria uploads para armazenar temporariamente os ficheiros que forem submetidos na web app, mas este são imediatamente copiados para a pasta images.</p>
+        <p>Para fazer upload de um ficheiro é utilizado o método POST e para as restantes funcionalidades são utilizados GET's.</p>
+        <p>Por fim, como extra, permiti apresentar a página do ficheiro quando o utilizador clica no seu nome, que aparece na listagem da página principal.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>controllers/file.js</url>
+            <texto>Controlador para a gestão da meta-informação</texto>
+        </resultado>
+        <resultado>
+            <url>models/file.js</url>
+            <texto>Modelo para a meta-informação dos ficheiros</texto>
+        </resultado>
+        <resultado>
+            <url>app.js</url>
+            <texto>Aplicação web</texto>
+        </resultado>
+        <resultado>
+            <url>package.json</url>
+            <texto>Configurações para a execução do servidor</texto>
+        </resultado>
+        <resultado>
+            <url>public/images/</url>
+            <texto>Diretoria que contém os ficheiros que vão sendo submetidos na página web.</texto>
+        </resultado>
+        <resultado>
+            <url>bin/</url>
+            <texto>Diretoria que contém o script para iniciar o web server</texto>
+        </resultado>
+        <resultado>
+            <url>routes/index.js</url>
+            <texto>Rota principal</texto>
+        </resultado>
+        <resultado>
+            <url>views/</url>
+            <texto>Diretoria com todas as views implementadas</texto>
+        </resultado>
+        <resultado>
+            <url>uploads/</url>
+            <texto>Diretoria utilizada para armazenar temporariamente os uploads</texto>
+        </resultado>
+    </resultados>
+</doc>

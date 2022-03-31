@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  .w3-row
+    .w3-card-4.w3-margin
+      header(class="w3-container w3-teal")
+        h3 Upload de um ficheiro
+
+      form.w3-container.w3-margin(class='w3-container' method='POST' action='/files' enctype='multipart/form-data')
+        .w3-row-padding 
+          .w3-col.s6
+            label.w3-text-teal
+              b Selecionar Ficheiro
+            input.w3-input.w3-border.w3-light-grey(type='file' name='myFile')
+          .w3-col.s6
+            label.w3-text-teal
+              b Descrição
+            input.w3-input.w3-border.w3-light-grey(type='text' name='fileDesc')
+        .w3-container.w3-right-align.w3-margin
+          input.w3-btn.w3-teal.w3-border.w3-round-large(type='submit' value='Submeter')
+            
+  .w3-row
+    .w3-card-4.w3-margin
+      header(class="w3-container w3-teal")
+        h3 Lista de ficheiros 
+
+      if list.length > 0
+        .w3-container.w3-center
+
+          table.w3-table.w3-striped
+            tr 
+              th Data
+              th Nome
+              th Descrição
+              th Mimetype 
+              th Tamanho
+              th 
+            each f in list
+              tr
+                td= f.date
+                td
+                  a(href="/files/" + f.id)= f.name
+                td= f.description
+                td= f.mimetype 
+                td= f.size
+                td
+                  a.w3-btn.w3-red.w3-border.w3-round-large(href="/files/remove?id="+f.id+"&name="+f.name) Eliminar
+
+      else
+        .w3-container
+          p Não existem ficheiros...
