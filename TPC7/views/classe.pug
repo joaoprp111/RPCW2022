@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    .w3-container.w3-teal
+        h1 Classe #{c.codigo} - nível #{c.nivel}
+    .w3-container
+        h3= c.titulo
+        hr
+        p 
+            b Descrição: 
+            = c.descricao
+        hr
+        p
+            b Status: 
+            = c.status
+        hr 
+        
+        if c.filhos.length > 0
+            p 
+                b Filhos:
+            ul.w3-ul.w3-margin-bottom
+                each f in c.filhos
+                    li
+                        a(href="http://localhost:4000/classes/" + f.codigo)= f.codigo
+        
+        if relacionados.length > 0
+            p 
+                b Relacionados: 
+            table.w3-text-black.w3-table.w3-bordered.w3-striped.w3-centered.w3-margin-bottom
+                tr 
+                    th Código
+                    th Tipo de relação
+                each r in relacionados
+                    tr 
+                        td
+                           a(href="http://localhost:4000/classes/" + r.codigo)= r.codigo
+                        td= r.idRel 
+        
+        div.w3-teal.w3-padding-16(style='position: fixed; left: 0; bottom: 0; width: 100%; text-align: center;')
+            if c.nivel > 1
+                .w3-row 
+                    .w3-col.s6
+                        a(href='http://localhost:4000/classes') Voltar à página principal
+                    .w3-col.s6 
+                         a(href="http://localhost:4000/classes/" + c.pai.codigo) Voltar à página anterior
+            else
+                a(href='http://localhost:4000/classes') Voltar à página principal
+               
+            
