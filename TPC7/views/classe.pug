@@ -18,7 +18,7 @@ block content
         if c.filhos.length > 0
             p 
                 b Filhos:
-            ul.w3-ul.w3-margin-bottom
+            ul.w3-ul(style='margin-bottom: 70px;')
                 each f in c.filhos
                     li
                         a(href="http://localhost:4000/classes/" + f.codigo)= f.codigo
@@ -26,7 +26,7 @@ block content
         if relacionados.length > 0
             p 
                 b Relacionados: 
-            table.w3-text-black.w3-table.w3-bordered.w3-striped.w3-centered.w3-margin-bottom
+            table.w3-text-black.w3-table.w3-bordered.w3-striped.w3-centered(style='margin-bottom: 70px;')
                 tr 
                     th Código
                     th Tipo de relação
