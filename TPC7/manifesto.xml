@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC7: CLAV: Classificação e Avaliação da Informação Pública</titulo>
+        <data>2022-04-11</data>
+        <autor>
+            <id>PG47325</id>
+            <nome>João Paulo Ribeiro Pereira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>O objetivo deste tpc foi implementar uma aplicação em nodejs para navegar entre a estrutura de classes da CLAV, que pode ser obtida através da <xref><texto>CLAV API</texto><url>http://clav-api.di.uminho.pt/v2/docs/</url></xref></p>
+        <p>Para completar as alíneas foi necessário fazer vários pedidos a API para poder apresentar a informação na nova aplicação.</p>
+        <p>De modo a conseguir permissões para efetuar os pedidos à API foi necessário utilizar uma API key, que decidi armazenar num ficheiro .txt.</p>
+        <p>Antes de implementar as funcionalidades pedidas na aplicação, foi criado um ficheiro aquecimento.py para completar todas as alíneas de aquecimento e conhecer o modo de funcionamento da API, e de como aceder à sua informação.</p>
+        <p>A aplicação desenvolvida permite aceder a todas as classes de nível 1 na página principal, bem como o número de classes desse nível existentes.</p>
+        <p>A página principal pode ser acedida através do <xref><texto>link</texto><url>http://localhost:4000/classes</url></xref>, ou simplesmento com o <xref><texto>link</texto><url>http://localhost:4000/</url></xref></p>
+        <p>Todos os códigos das classes da página principal permitem avançar para as respetivas páginas individuais.</p>
+        <p>Se a classe acedida for de nível 2 ou mais, existe uma hiperligação para voltar à página da sua classe pai. Em qualquer classe, de nível 1 até 4, existe uma hiperligação para voltar à página principal.</p>
+        <p>As páginas individuais das classes apresentam os códigos das classes com 1 nível abaixo, e no caso de serem de nível 3, apresentam os códigos das classes relacionadas, também com hiperligação para as suas páginas.</p>
+        <p>As relações apresentadas são apenas do tipo eCruzadoCom, eComplementarDe, eSuplementoDe e eSuplementoPara.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>aquecimento.py</url>
+            <texto>Script com a resolução das alíneas de aquecimento.</texto>
+        </resultado>
+        <resultado>
+            <url>apikey.txt</url>
+            <texto>Ficheiro que contém a apikey utilizada para ter permissões nos pedidos feitos à CLAV API.</texto>
+        </resultado>
+        <resultado>
+            <url>app.js</url>
+            <texto>Aplicação desenvolvida.</texto>
+        </resultado>
+        <resultado>
+            <url>package.json</url>
+            <texto>Configurações para a execução da aplicação.</texto>
+        </resultado>
+        <resultado>
+            <url>public/</url>
+            <texto>Diretoria que contém os recursos estáticos da aplicação.</texto>
+        </resultado>
+        <resultado>
+            <url>bin/</url>
+            <texto>Diretoria que contém o script para iniciar o web server.</texto>
+        </resultado>
+        <resultado>
+            <url>routes/index.js</url>
+            <texto>Rota que trata os pedidos das classes.</texto>
+        </resultado>
+        <resultado>
+            <url>views/</url>
+            <texto>Diretoria com todas as views implementadas.</texto>
+        </resultado>
+    </resultados>
+</doc>
