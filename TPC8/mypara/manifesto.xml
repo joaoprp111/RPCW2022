@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC8: Gestão de parágrafos</titulo>
+        <data>2022-04-26</data>
+        <autor>
+            <id>PG47325</id>
+            <nome>João Paulo Ribeiro Pereira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>O objetivo deste trabalho foi implementar uma página dinâmica para gerir parágrafos.</p>
+        <p>É utilizado um javascript que faz pedidos à app express, com o objetivo de alterar, adicionar e eliminar parágrafos.</p>
+        <p>A aplicação está associada a uma base de dados não relacional (MongoDB).</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>app.js</url>
+            <texto>Aplicação desenvolvida.</texto>
+        </resultado>
+        <resultado>
+            <url>package.json</url>
+            <texto>Configurações para a execução da aplicação.</texto>
+        </resultado>
+        <resultado>
+            <url>public/javascripts/mypara.js</url>
+            <texto>Javascript utilizado para resolver o problema.</texto>
+        </resultado>
+        <resultado>
+            <url>public/htmls/mypara.html</url>
+            <texto>Html utilizado para visualizar os parágrafos.</texto>
+        </resultado>
+        <resultado>
+            <url>bin/</url>
+            <texto>Diretoria que contém o script para iniciar o web server.</texto>
+        </resultado>
+        <resultado>
+            <url>controllers/</url>
+            <texto>Pasta com o controlador da app.</texto>
+        </resultado>
+        <resultado>
+            <url>models/</url>
+            <texto>Pasta com o modelo da app.</texto>
+        </resultado>
+        <resultado>
+            <url>routes/index.js</url>
+            <texto>Rota que trata os pedidos das classes.</texto>
+        </resultado>
+    </resultados>
+</doc>
