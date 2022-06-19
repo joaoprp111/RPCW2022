@@ -1,0 +1,43 @@
+# Recursos
+
+1. Permitir alterar o título ou o tipo de conteúdo de um recurso (só pode alterar o admin ou um produtor se o recurso for dele) [DONE]
+2. Permitir eliminar recursos (admin tem permissão ou um produtor se o recurso for dele) [DONE]
+3. Permitir listar por tipo [DONE]
+    Alguns tipos exemplo:
+        - enunciado 
+        - tese de mestrado 
+        - artigo 
+        - relatório
+        - ... 
+4. Permitir encontrar recursos através duma barra de pesquisa [DONE] 
+5. Permitir transferir recursos (acho que toda a gente pode fazer isso) [DONE]
+6. Permitir meter likes nos recursos (e apresentar a contagem) [DONE]
+7. Permitir comentários nos recursos (e mostrar os comentários) [DONE]
+
+# Utilizadores 
+
+1. Permitir listar todos os utilizadores, por consumidor e por produtor (só o admin) [DONE]
+2. Permitir alterar os níveis de permissão dos utilizadores (só o admin) [DONE]
+3. Permitir eliminar utilizadores (só o admin ou o próprio utilizador) [DONE]
+4. Permitir aceder ao próprio perfil (produtor e consumidor) [DONE]
+5. No perfil do produtor poderá haver referência aos recursos que ele submeteu [DONE]
+6. Alterar a password ou username (o próprio utilizador) [DONE]
+
+# Notícias 
+
+1. Listar notícias [DONE]
+2. Eliminar notícias [DONE]
+3. Alterar visibilidade (por parte do admin) [DONE]
+3. Adicionar notícia quando: [DONE]
+    - é feito um upload [DONE]
+    - alguém edita um recurso [DONE]
+    - alguém mete um like [DONE]
+    - alguém comenta [DONE]
+    - alguém remove um comentário [DONE]
+    - alguém remove um recurso [DONE]
+
+# Logs
+
+1. Listar logs [DONE]
+2. Eliminar logs [DONE]
+3. Adicionar log sempre que for feita uma ação fulcral [DONE]

@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/navbar.css')
+    link(rel='stylesheet', href='/stylesheets/w3.css')
+    link(rel='stylesheet', href='/stylesheets/searchbar.css')
+    script(src='https://kit.fontawesome.com/a076d05399.js')
+  body
+    .topnav
+      if logged == undefined
+        a(href="/registar").w3-right Registo
+        a(href="/login").w3-right Login
+      else
+        .navbar-search-container
+          form.form-inline.w3-left.w3-container(action="/recursos/search")
+            input.w3-left.form-inline-input(type="text" placeholder="Search" name="search")
+            button.w3-border.w3-white.w3-right.form-inline-button(type="submit" value="Search" class="fas fa-search" style="font-size: 15px;") 
+              //- b Search
+        a(href="/").w3-left Homepage
+        a(href="/users/logout").w3-right Logout
+        a(href="/users/perfil").w3-right Perfil
+        .dropdown.w3-right
+          button.dropdown.dropbtn Tipos
+          .dropdown.dropdown-content
+            if nivel == 'admin'
+              a(href="/recursos/administrar?tipo=tese") Tese
+              a(href="/recursos/administrar?tipo=enunciado") Enunciado
+              a(href="/recursos/administrar?tipo=artigo") Artigo
+              a(href="/recursos/administrar?tipo=relatorio") Relatório
+              a(href="/recursos/administrar?tipo=slides") Slides
+            else
+              a(href="/recursos/tipo?tipo=tese") Tese
+              a(href="/recursos/tipo?tipo=enunciado") Enunciado
+              a(href="/recursos/tipo?tipo=artigo") Artigo
+              a(href="/recursos/tipo?tipo=relatorio") Relatório
+              a(href="/recursos/tipo?tipo=slides") Slides
+        if nivel == 'consumidor'
+          a(href="/recursos").w3-right Recursos
+        else if nivel== 'produtor'
+          a(href="/upload").w3-right Upload File
+          a(href="/recursos").w3-right Recursos
+        else if nivel == 'admin'
+          a(href="/logs").w3-right Logs
+          a(href="/upload").w3-right Upload File
+          a(href="/recursos/administrar").w3-right Recursos
+          a(href="/users").w3-right Utilizadores
+        // Noticias
+        // Logs
